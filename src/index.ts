@@ -27,12 +27,12 @@ export const tools = [
             parameters: {
                 type: 'object',
                 properties: {
-                    qrimg: {
+                    input: {
                         type: 'string',
                         description: 'String to be encoded',
                     }
                 },
-                required: ['qrimg']
+                required: ['input']
             }
         }
     },
