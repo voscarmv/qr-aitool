@@ -1,7 +1,7 @@
 import QRCode from 'qrcode';
 import { readBarcodes } from 'zxing-wasm/reader';
 
-export const tools = [
+const tools = [
     {
         type: 'function' as const,
         function: {
@@ -38,7 +38,7 @@ export const tools = [
     },
 ];
 
-export const functions = {
+const functions = {
     readQR: async (params: any, additionalArgs: any): Promise<string> => {
         const { aicache } = additionalArgs;
         const { qrimg } = params;
@@ -57,3 +57,5 @@ export const functions = {
         return key;
     },
 };
+
+export const qrtools = { tools, functions };
